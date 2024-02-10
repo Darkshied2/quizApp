@@ -27,7 +27,7 @@ SECRET_KEY = '@k0#p3kidu)yaaa3u1hplxz)f@^6xiy384*(+n@@s5x#1bx@m5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
@@ -129,6 +129,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
 STATIC_DIR,
  ]
+
+STATICFILES_DIRS =os.path.join(BASE_DIR,"static"),
+STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles_build","static")
 
 LOGIN_REDIRECT_URL='/afterlogin'
 
